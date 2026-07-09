@@ -62,9 +62,11 @@ export const ProgramModal = ({
                     </span>
                     <span
                       className={`flex h-[18px] items-center justify-center rounded-[2px] px-[5px] py-[1px] text-[0.75rem] font-normal text-white md:h-[30px] md:text-xl ${
-                        program.season === "summer"
-                          ? "bg-[#B77778]"
-                          : "bg-[#7794B7]"
+                        program.season === "special"
+                          ? "bg-[#D4462D]"
+                          : program.season === "summer"
+                            ? "bg-[#B77778]"
+                            : "bg-[#7794B7]"
                       }`}>
                       {getFormattedSeason(program.season)}
                     </span>
@@ -84,7 +86,9 @@ export const ProgramModal = ({
                   )}
                   {renderDescription("내용", program.description)}
                   {renderDescription("장소", program.location)}
-                  {renderDescription("코칭 스탭", program.staff)}
+                  {renderDescription("훈련 리드", program.staff)}
+                  {program.support &&
+                    renderDescription("물품 지원", program.support)}
                 </Description>
               </div>
               <hr className="border-white" aria-hidden />
