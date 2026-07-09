@@ -4,8 +4,51 @@ import Summer2024 from "@/assets/home/2024-summer-background.png"
 import Winter2024 from "@/assets/home/2024-winter-background.png"
 import Winter2025 from "@/assets/home/2025-winter-background.png"
 import Summer2025 from "@/assets/home/2025-summer-background.png"
+import Winter2026 from "@/assets/home/2026-winter-background.png"
+import PB2026 from "@/assets/home/2026-10k-background.png"
 
 const PROGRAMS: Program[] = [
+  {
+    name: "10K 기록 단축 프로젝트",
+    year: 2026,
+    season: "special",
+    period: {
+      start: "2026년 4월 4일",
+      end: "6월 13일",
+    },
+    location: "반포종합운동장 외",
+    image: PB2026.src,
+    link: "https://about.guiderun.org/blog/2026-10k-program",
+    linkLabel: "조재석 기술책임의 프로그램 회고 보러가기 >",
+    staff: "조재석 기술책임",
+    support: "조이웍스(써코니 코리아)",
+    description:
+      "매주 토요일 아침, 어울림 마라톤대회 10K 기록 단축을 함께 준비",
+    result: `총 참석인원 : 총 54명 (토요일 훈련 기준)
+• 시각장애러너 : 26명
+• 가이드러너 : 28명`,
+  },
+  {
+    name: "10주 훈련 프로그램",
+    year: 2026,
+    season: "winter",
+    period: {
+      start: "2026년 1월 3일",
+      end: "3월 7일",
+    },
+    location: "여의도공원 외",
+    image: Winter2026.src,
+    link: "https://about.guiderun.org/blog/26w10w-impact-review",
+    linkLabel: "프로그램 운영 결과 바로가기 >",
+    staff: "가이드런프로젝트 서포터즈 (매니저 4, 트레이너 4, 웰커머 10)",
+    description: "매주 토요일 아침에 다같이 모여 춘계 마라톤 함께 준비",
+    result: `총 참석인원 : 총 89명 (토요일 훈련 기준)
+• 시각장애러너 : 30명
+• 가이드러너 : 59명
+신규 인원 : 총 26명 (토요일 훈련 기준)
+• 시각장애러너 참가자 30명 중 5명(16%)
+• 가이드러너 참가자 59명 중 21명(35%)`,
+  },
   {
     name: "12주 훈련 프로그램",
     year: 2025,

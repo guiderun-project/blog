@@ -6,7 +6,7 @@ import { ProgramModal } from "./program-modal"
 
 export interface Program {
   name: string
-  season: "spring" | "summer" | "fall" | "winter"
+  season: "spring" | "summer" | "fall" | "winter" | "special"
   year: number
   period: {
     start: string
@@ -15,6 +15,7 @@ export interface Program {
   description: string
   location: string
   staff: string
+  support?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: any
   link?: string
@@ -32,6 +33,8 @@ export const getFormattedSeason = (season: Program["season"]) => {
       return "추계"
     case "winter":
       return "동계"
+    case "special":
+      return "특별훈련"
   }
 }
 
@@ -52,7 +55,11 @@ export const ProgramItem = ({ program }: { program: Program }) => {
             </span>
             <span
               className={`flex h-[18px] items-center justify-center rounded-[2px] px-[5px] py-[1px] text-[0.75rem] font-normal text-white md:h-[30px] md:text-xl ${
-                program.season === "summer" ? "bg-[#B77778]" : "bg-[#7794B7]"
+                program.season === "special"
+                  ? "bg-[#D4462D]"
+                  : program.season === "summer"
+                    ? "bg-[#B77778]"
+                    : "bg-[#7794B7]"
               }`}>
               {getFormattedSeason(program.season)}
             </span>
